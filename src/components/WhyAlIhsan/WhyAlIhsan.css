@@ -1,0 +1,229 @@
+.why-section {
+  background-color: var(--bg-white);
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+  position: relative;
+}
+
+.why__container {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.why__grid-layout {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: var(--space-3xl);
+  align-items: center;
+}
+
+/* Left Column */
+.why__content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+}
+
+.why__eyebrow-wrapper {
+  margin-bottom: var(--space-md);
+}
+
+.why__eyebrow {
+  display: inline-block;
+  background-color: var(--bg-soft);
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--border-soft);
+}
+
+/* Rolling Title Styling */
+.why__title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  font-size: var(--text-section-title);
+  line-height: 1.25;
+  margin-bottom: var(--space-md);
+  color: var(--heading-ink);
+  letter-spacing: -0.02em;
+}
+
+.why__title-static {
+  display: block;
+}
+
+.why__title-rotator {
+  display: block;
+  height: 1.25em; /* Matches line height of one question */
+  overflow: hidden;
+  position: relative;
+  color: var(--accent);
+  font-weight: 800;
+  margin-top: 2px;
+}
+
+.why__title-words-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.why__title-word {
+  display: block;
+  height: 1.25em;
+  line-height: 1.25;
+  white-space: nowrap;
+}
+
+.why__subtitle {
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--body-gray);
+  margin: 0;
+}
+
+/* Right Column - Synced Card Carousel Viewport */
+.why__carousel-viewport {
+  display: block;
+  height: 290px; /* Increased height to give cards more breathing room */
+  overflow: hidden;
+  position: relative;
+  border: 1px solid var(--border-soft);
+  border-radius: var(--border-radius-card);
+  background-color: var(--surface-card);
+  box-shadow: 0 10px 30px rgba(91, 33, 182, 0.02);
+  transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+}
+
+.why__carousel-viewport:hover {
+  border-color: var(--accent);
+  box-shadow: 0 12px 35px rgba(91, 33, 182, 0.04);
+}
+
+.why__carousel-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* Individual Card (Lid inside the Viewport) */
+.why__card {
+  height: 100%;
+  width: 100%;
+  flex-shrink: 0;
+  padding: var(--space-lg) var(--space-md); /* Reduced vertical padding to gain space */
+  text-align: start;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.why__card-icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 10px;
+  background-color: var(--bg-soft);
+  color: var(--accent);
+  margin-bottom: 14px; /* Reduced margin below icon */
+  flex-shrink: 0;
+}
+
+.why__card-title {
+  font-size: var(--text-card-title);
+  font-weight: 700;
+  color: var(--heading-ink);
+  margin: 0 0 6px 0; /* Reduced margin below title */
+  line-height: 1.3;
+}
+
+.why__card-desc {
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--body-gray);
+  margin: 0;
+}
+
+/* Scroll Entrance Animation Triggers */
+.why__content.is-visible .fade-up,
+.why__carousel-viewport.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* Responsive Media Queries */
+@media (max-width: 992px) {
+  .why__grid-layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-2xl);
+  }
+
+  .why__content {
+    align-items: center;
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  .why__title {
+    align-items: center;
+  }
+
+  .why__carousel-viewport {
+    max-width: 540px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-section {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .why__content {
+    padding: 0 var(--space-xs);
+  }
+
+  .why__title {
+    font-size: 1.6rem;
+  }
+
+  .why__title-rotator {
+    font-size: clamp(0.95rem, 4.2vw, 1.25rem);
+    height: 1.25em;
+  }
+
+  .why__carousel-viewport {
+    height: 280px; /* Svelte height with optimized card details */
+    padding: 0;
+  }
+
+  .why__card {
+    padding: var(--space-md) var(--space-md);
+  }
+
+  .why__card-icon-wrapper {
+    width: 38px;
+    height: 38px;
+    margin-bottom: 8px;
+  }
+
+  .why__card-icon-wrapper svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .why__card-title {
+    margin-bottom: 4px;
+  }
+}

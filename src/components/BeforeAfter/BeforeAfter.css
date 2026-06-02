@@ -1,0 +1,269 @@
+.before-after-section {
+  background-color: var(--bg-white);
+  padding-top: var(--space-3xl);
+  padding-bottom: var(--space-3xl);
+  position: relative;
+}
+
+.before-after__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.before-after__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 820px;
+  margin-bottom: var(--space-2xl);
+}
+
+.before-after__eyebrow-wrapper {
+  margin-bottom: var(--space-md);
+}
+
+.before-after__eyebrow {
+  display: inline-block;
+  background-color: var(--bg-soft);
+  color: var(--accent);
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: var(--text-small);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--border-soft);
+}
+
+.before-after__title {
+  font-size: var(--text-section-title);
+  line-height: 1.2;
+  margin-bottom: var(--space-md);
+  color: var(--heading-ink);
+  letter-spacing: -0.02em;
+}
+
+.before-after__subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--body-gray);
+  max-width: 680px;
+  margin: 0;
+}
+
+/* Comparison Columns Layout */
+.before-after__comparison {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-lg);
+  width: 100%;
+  max-width: 1000px;
+}
+
+.before-after__col {
+  flex: 1;
+  border-radius: var(--border-radius-card);
+  padding: var(--space-xl) var(--space-lg);
+  text-align: start;
+  transition: all 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Before Column (Muted and Muted-Red tint) */
+.before-after__col--before {
+  background-color: #FAFAFA;
+  border: 1px solid #E5E5E5;
+  opacity: 0.8;
+}
+
+.before-after__col--before:hover {
+  opacity: 0.9;
+  border-color: var(--muted-gray);
+}
+
+/* After Column (Vibrant and Violet tint) */
+.before-after__col--after {
+  background-color: var(--bg-soft);
+  border: 1px solid var(--border-soft);
+  box-shadow: 0 4px 25px rgba(91, 33, 182, 0.015);
+}
+
+.before-after__col--after:hover {
+  border-color: var(--accent);
+  box-shadow: 0 10px 30px rgba(91, 33, 182, 0.04);
+}
+
+.before-after__col-title {
+  font-size: var(--text-card-title);
+  font-weight: 700;
+  margin: 0 0 var(--space-lg) 0;
+  line-height: 1.2;
+}
+
+.before-after__col--before .before-after__col-title {
+  color: var(--body-gray);
+}
+
+.before-after__col--after .before-after__col-title {
+  color: var(--primary);
+}
+
+.before-after__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.before-after__item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+}
+
+.before-after__icon-holder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.before-after__icon-holder--before {
+  background-color: #FEE2E2; /* Soft red tint */
+  color: #EF4444;
+}
+
+.before-after__icon-holder--after {
+  background-color: var(--border-soft); /* Soft purple tint */
+  color: var(--primary);
+}
+
+.before-after__item-text {
+  font-size: 0.925rem;
+  line-height: 1.4;
+  color: var(--heading-ink);
+  font-weight: 500;
+}
+
+/* Connector Chevron */
+.before-after__connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.before-after__arrow-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--bg-soft);
+  border: 1px solid var(--border-soft);
+  color: var(--primary);
+}
+
+.before-after__arrow {
+  transition: transform var(--transition-speed) ease;
+}
+
+/* Entrance Animations */
+.fade-left {
+  opacity: 0;
+  transform: translateX(-24px);
+  transition: opacity 650ms cubic-bezier(0.16, 1, 0.3, 1), transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.fade-right {
+  opacity: 0;
+  transform: translateX(24px);
+  transition: opacity 650ms cubic-bezier(0.16, 1, 0.3, 1), transform 650ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.before-after__comparison.is-visible .fade-left {
+  opacity: 0.8; /* Restores the default 0.8 opacity for Before card */
+  transform: translateX(0);
+}
+
+.before-after__comparison.is-visible .fade-right {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.before-after__comparison.is-visible .scale-in {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+  .before-after-section {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .before-after__content {
+    margin-bottom: var(--space-lg);
+    padding: 0 var(--space-xs);
+  }
+
+  .before-after__title {
+    font-size: 1.6rem;
+  }
+
+  .before-after__comparison {
+    flex-direction: column;
+    gap: var(--space-md);
+    padding: 0 var(--space-xs);
+  }
+
+  .before-after__col {
+    width: 100%;
+    padding: var(--space-lg) var(--space-md);
+  }
+
+  .before-after__connector {
+    transform: rotate(90deg); /* Rotate arrow pointing down */
+    margin: var(--space-xs) 0;
+  }
+
+  /* Safe vertical animation override on mobile */
+  .fade-left, .fade-right {
+    transform: translateY(20px);
+  }
+
+  .before-after__comparison.is-visible .fade-left {
+    transform: translateY(0);
+  }
+
+  .before-after__comparison.is-visible .fade-right {
+    transform: translateY(0);
+  }
+}
+
+/* RTL Support for Before/After */
+[dir="rtl"] .fade-left {
+  transform: translateX(24px);
+}
+[dir="rtl"] .fade-right {
+  transform: translateX(-24px);
+}
+[dir="rtl"] .before-after__comparison.is-visible .fade-left,
+[dir="rtl"] .before-after__comparison.is-visible .fade-right {
+  transform: translateX(0);
+}
+
+@media (min-width: 769px) {
+  [dir="rtl"] .before-after__arrow {
+    transform: rotate(180deg);
+  }
+}
+
