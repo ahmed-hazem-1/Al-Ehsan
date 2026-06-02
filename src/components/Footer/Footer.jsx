@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
+import logoImg from '../../assets/alehsan-logo.png';
 import './Footer.css';
 
 export default function Footer() {
@@ -30,7 +31,10 @@ export default function Footer() {
           
           {/* Column 1: Brand & Tagline */}
           <div className="footer__col footer__col--brand">
-            <span className="footer__logo-text">{t('nav.logo')}</span>
+            <div className="footer__logo-container">
+              <img src={logoImg} alt="Al Ihsan Logo" className="footer__logo-img" />
+              <span className="footer__logo-text">{t('nav.logo')}</span>
+            </div>
             <p className="footer__tagline">
               {t('footer.tagline')}
             </p>

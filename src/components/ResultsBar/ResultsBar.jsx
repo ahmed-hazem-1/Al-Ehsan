@@ -41,7 +41,7 @@ export default function ResultsBar() {
                   <span className="results__card-label">{t('results.financialGrowth')}</span>
                 </div>
                 <div className="results__card-body">
-                  <span className="results__card-metric">{lang === 'ar' ? '38%+' : '+38%'}</span>
+                  <span className="results__card-metric">{(lang === 'ar' || lang === 'ly' || lang === 'sa') ? '38%+' : '+38%'}</span>
                   <p className="results__card-text">{t('results.avgRevenueGrowth')}</p>
                 </div>
               </div>
@@ -100,7 +100,7 @@ export default function ResultsBar() {
                 <span className="results__card-label">{t('results.efficiencyLabel')}</span>
               </div>
               <div className="results__card-body">
-                <span className="results__card-metric">{lang === 'ar' ? '14 يوماً-' : '-14 Days'}</span>
+                <span className="results__card-metric">{(lang === 'ar' || lang === 'ly' || lang === 'sa') ? '14 يوماً-' : '-14 Days'}</span>
                 <p className="results__card-text">{t('results.efficiencyText')}</p>
               </div>
             </div>

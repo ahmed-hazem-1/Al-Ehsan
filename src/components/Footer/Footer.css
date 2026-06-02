@@ -28,13 +28,24 @@
   align-items: flex-start;
 }
 
-/* Column 1: Brand */
+.footer__logo-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: var(--space-md);
+}
+
+.footer__logo-img {
+  height: 56px;
+  width: auto;
+  object-fit: contain;
+}
+
 .footer__logo-text {
   font-size: 1.3rem;
   font-weight: 750;
   color: var(--bg-white);
   letter-spacing: -0.01em;
-  margin-bottom: var(--space-md);
 }
 
 .footer__tagline {

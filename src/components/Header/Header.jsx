@@ -1,12 +1,36 @@
-import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
+import logoImg from '../../assets/alehsan-logo.png';
 import './Header.css';
+
+const languages = [
+  { code: 'ar', label: 'العربية' },
+  { code: 'ly', label: 'عربي (ليبيا)' },
+  { code: 'sa', label: 'عربي (السعودية)' },
+  { code: 'eg', label: 'عربي (مصر)' },
+  { code: 'bn', label: 'বাংলা' },
+  { code: 'en', label: 'English' }
+];
 
 export default function Header({ showMobileCta }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const { t, lang, toggleLanguage } = useLanguage();
+  const [isLangOpen, setIsLangOpen] = useState(false);
+  const { t, lang, setLang } = useLanguage();
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsLangOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,9 +69,10 @@ export default function Header({ showMobileCta }) {
 
   return (
     <>
-      <header className={`header ${isScrolled ? 'header--scrolled' : ''} ${isMenuOpen ? 'header--open' : ''}`} id="header">
+      <header className={`header ${isScrolled ? 'header--scrolled' : ''} ${isMenuOpen ? 'header--open' : ''} ${isLangOpen ? 'header--lang-open' : ''}`} id="header">
         <div className="header__container">
           <a href="#" className="header__logo" aria-label={t('nav.logo')}>
+            <img src={logoImg} alt="Al Ihsan Logo" className="header__logo-img" />
             <span className="header__logo-text">{t('nav.logo')}</span>
           </a>
 
@@ -76,14 +101,39 @@ export default function Header({ showMobileCta }) {
           </nav>
 
           <div className="header__actions">
-            {/* Language Switcher */}
-            <button 
-              onClick={toggleLanguage}
-              className="header__lang-toggle"
-              aria-label="Toggle language"
-            >
-              {lang === 'ar' ? 'English' : 'العربية'}
-            </button>
+            {/* Language Dropdown */}
+            <div className="header__lang-dropdown" ref={dropdownRef}>
+              <button 
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="header__lang-toggle"
+                aria-haspopup="true"
+                aria-expanded={isLangOpen}
+                aria-label="Select language"
+              >
+                <span>
+                  {languages.find((l) => l.code === lang)?.label || 'العربية'}
+                </span>
+                <ChevronDown size={12} className={`header__lang-chevron ${isLangOpen ? 'header__lang-chevron--open' : ''}`} />
+              </button>
+              
+              {isLangOpen && (
+                <ul className="header__lang-menu">
+                  {languages.map((l) => (
+                    <li key={l.code}>
+                      <button
+                        onClick={() => {
+                          setLang(l.code);
+                          setIsLangOpen(false);
+                        }}
+                        className={`header__lang-option ${lang === l.code ? 'header__lang-option--active' : ''}`}
+                      >
+                        {l.label}
+                      </button>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
 
             <button 
               id="header-cta"
