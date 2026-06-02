@@ -32,12 +32,12 @@ export function LanguageProvider({ children }) {
     // SEO Meta updates
     if (lang === 'ar' || lang === 'ly' || lang === 'sa' || lang === 'eg') {
       document.title = lang === 'sa'
-        ? 'الإحسان — شريك استشارات نمو إيرادات الرعاية الصحية في السعودية'
+        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في السعودية'
         : lang === 'ly'
-        ? 'الإحسان — شريك استشارات نمو إيرادات الرعاية الصحية في ليبيا'
+        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في ليبيا'
         : lang === 'eg'
-        ? 'الإحسان — شريك استشارات نمو إيرادات الرعاية الصحية في مصر'
-        : 'الإحسان — شريك استشارات نمو إيرادات الرعاية الصحية';
+        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في مصر'
+        : 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية';
       const desc = document.querySelector('meta[name="description"]');
       if (desc) desc.setAttribute('content', lang === 'sa'
         ? 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان في الرياض والسعودية.'
@@ -49,12 +49,12 @@ export function LanguageProvider({ children }) {
       
       const ogTitle = document.querySelector('meta[property="og:title"]');
       if (ogTitle) ogTitle.setAttribute('content', lang === 'sa'
-        ? 'الإحسان — شريك استشارات نمو إيرادات الرعاية الصحية في السعودية'
+        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في السعودية'
         : lang === 'ly'
-        ? 'الإحسان — شريك استشارات نمو إيرادات الرعاية الصحية في ليبيا'
+        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في ليبيا'
         : lang === 'eg'
-        ? 'الإحسان — شريك استشارات نمو إيرادات الرعاية الصحية في مصر'
-        : 'الإحسان — شريك استشارات نمو إيرادات الرعاية الصحية');
+        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في مصر'
+        : 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية');
       const ogDesc = document.querySelector('meta[property="og:description"]');
       if (ogDesc) ogDesc.setAttribute('content', lang === 'sa'
         ? 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان في الرياض والسعودية.'
@@ -66,12 +66,12 @@ export function LanguageProvider({ children }) {
       
       const twTitle = document.querySelector('meta[name="twitter:title"]');
       if (twTitle) twTitle.setAttribute('content', lang === 'sa'
-        ? 'الإحسان — شريك استشارات نمو إيرادات الرعاية الصحية في السعودية'
+        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في السعودية'
         : lang === 'ly'
-        ? 'الإحسان — شريك استشارات نمو إيرادات الرعاية الصحية في ليبيا'
+        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في ليبيا'
         : lang === 'eg'
-        ? 'الإحسان — شريك استشارات نمو إيرادات الرعاية الصحية في مصر'
-        : 'الإحسان — شريك استشارات نمو إيرادات الرعاية الصحية');
+        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في مصر'
+        : 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية');
       const twDesc = document.querySelector('meta[name="twitter:description"]');
       if (twDesc) twDesc.setAttribute('content', lang === 'sa'
         ? 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان في الرياض والسعودية.'
@@ -81,31 +81,31 @@ export function LanguageProvider({ children }) {
         ? 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان في القاهرة ومصر.'
         : 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان.');
     } else if (lang === 'bn') {
-      document.title = 'আল ইহসান — স্বাস্থ্যসেবা রাজস্ব প্রবৃদ্ধি এবং পরামর্শকারী অংশীদার';
+      document.title = 'আল ইহসান — স্বাস্থ্যসেবা রাজস্ব প্রবৃদ্ধি এবং পরামর্শকারী প্রতিষ্ঠান';
       const desc = document.querySelector('meta[name="description"]');
       if (desc) desc.setAttribute('content', 'লুকানো রাজস্ব উন্মোচন করুন, বীমা চুক্তি অপ্টিমাইজ করুন এবং বকেয়া সংগ্রহ দ্রুত করুন। আল ইহসানের সাথে একটি ফ্রি পরামর্শ বুক করুন।');
       
       const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute('content', 'আল ইহসান — স্বাস্থ্যসেবা রাজস্ব প্রবৃদ্ধি এবং পরামর্শকারী অংশীদার');
+      if (ogTitle) ogTitle.setAttribute('content', 'আল ইহসান — স্বাস্থ্যসেবা রাজস্ব প্রবৃদ্ধি এবং পরামর্শকারী প্রতিষ্ঠান');
       const ogDesc = document.querySelector('meta[property="og:description"]');
       if (ogDesc) ogDesc.setAttribute('content', 'লুকানো রাজস্ব উন্মোচন করুন, বীমা চুক্তি অপ্টিমাইজ করুন এবং বকেয়া সংগ্রহ দ্রুত করুন। আল ইহসানের সাথে একটি ফ্রি পরামর্শ বুক করুন।');
       
       const twTitle = document.querySelector('meta[name="twitter:title"]');
-      if (twTitle) twTitle.setAttribute('content', 'আল ইহসান — স্বাস্থ্যসেবা রাজস্ব প্রবৃদ্ধি এবং পরামর্শকারী অংশীদার');
+      if (twTitle) twTitle.setAttribute('content', 'আল ইহসান — স্বাস্থ্যসেবা রাজস্ব প্রবৃদ্ধি এবং পরামর্শকারী প্রতিষ্ঠান');
       const twDesc = document.querySelector('meta[name="twitter:description"]');
       if (twDesc) twDesc.setAttribute('content', 'লুকানো রাজস্ব উন্মোচন করুন, বীমা চুক্তি অপ্টিমাইজ করুন এবং বকেয়া সংগ্রহ দ্রুত করুন। আল ইহসানের সাথে একটি ফ্রি পরামর্শ বুক করুন।');
     } else {
-      document.title = 'Al Ihsan — Healthcare Revenue Growth & Consulting Partner';
+      document.title = 'Al Ihsan — Healthcare Revenue Growth & Consulting Firm';
       const desc = document.querySelector('meta[name="description"]');
       if (desc) desc.setAttribute('content', 'Uncover hidden revenue, optimize contracts, and accelerate collections. Book a free consultation with Al Ihsan.');
       
       const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute('content', 'Al Ihsan — Healthcare Revenue Growth & Consulting Partner');
+      if (ogTitle) ogTitle.setAttribute('content', 'Al Ihsan — Healthcare Revenue Growth & Consulting Firm');
       const ogDesc = document.querySelector('meta[property="og:description"]');
       if (ogDesc) ogDesc.setAttribute('content', 'Uncover hidden revenue, optimize contracts, and accelerate collections. Book a free consultation with Al Ihsan.');
       
       const twTitle = document.querySelector('meta[name="twitter:title"]');
-      if (twTitle) twTitle.setAttribute('content', 'Al Ihsan — Healthcare Revenue Growth & Consulting Partner');
+      if (twTitle) twTitle.setAttribute('content', 'Al Ihsan — Healthcare Revenue Growth & Consulting Firm');
       const twDesc = document.querySelector('meta[name="twitter:description"]');
       if (twDesc) twDesc.setAttribute('content', 'Uncover hidden revenue, optimize contracts, and accelerate collections. Book a free consultation with Al Ihsan.');
     }

@@ -48,6 +48,16 @@
   letter-spacing: -0.01em;
 }
 
+:lang(ar) .footer__logo-text,
+:lang(ly) .footer__logo-text,
+:lang(sa) .footer__logo-text,
+:lang(eg) .footer__logo-text {
+  font-family: 'Gulzar', serif;
+  font-weight: 400;
+  font-size: 1.85rem;
+  line-height: 1;
+}
+
 .footer__tagline {
   font-size: 0.875rem;
   line-height: 1.6;

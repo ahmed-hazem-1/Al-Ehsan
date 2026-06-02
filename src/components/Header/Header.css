@@ -76,6 +76,16 @@
   font-family: inherit;
 }
 
+:lang(ar) .header__logo-text,
+:lang(ly) .header__logo-text,
+:lang(sa) .header__logo-text,
+:lang(eg) .header__logo-text {
+  font-family: 'Gulzar', serif;
+  font-weight: 400;
+  font-size: 1.65rem;
+  line-height: 1;
+}
+
 .header__actions {
   display: flex;
   align-items: center;
