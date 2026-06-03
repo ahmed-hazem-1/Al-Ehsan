@@ -345,6 +345,72 @@
   }
 }
 
+@media (max-width: 768px) {
+  .wanis-ocr-section {
+    padding-top: var(--space-xl);
+    padding-bottom: var(--space-xl);
+  }
+  
+  .wanis-ocr__intro-grid {
+    gap: var(--space-md);
+    margin-bottom: var(--space-xl);
+  }
+
+  .wanis-ocr__title {
+    font-size: 1.45rem !important;
+    line-height: 1.35 !important;
+    margin-bottom: var(--space-sm);
+    padding: 0 4px;
+  }
+  
+  .wanis-ocr__subtitle {
+    font-size: 0.875rem !important;
+    line-height: 1.55 !important;
+    margin-bottom: var(--space-md);
+    padding: 0 8px;
+  }
+  
+  .wanis-ocr__eyebrow {
+    font-size: 0.75rem !important;
+    padding: 4px 12px;
+  }
+
+  .wanis-ocr__cta-btn {
+    font-size: 0.875rem !important;
+    padding: 10px 20px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .wanis-ocr__ctas {
+    width: 100%;
+    padding: 0 var(--space-sm);
+  }
+
+  .wanis-ocr__features-header {
+    margin-top: var(--space-lg);
+    margin-bottom: var(--space-md);
+  }
+
+  .wanis-ocr__features-title {
+    font-size: 1.15rem !important;
+  }
+
+  .wanis-ocr__feature-card {
+    padding: var(--space-sm) var(--space-md);
+  }
+
+  .wanis-ocr__feature-title {
+    font-size: 0.9rem !important;
+    margin-bottom: 4px;
+  }
+
+  .wanis-ocr__feature-desc {
+    font-size: 0.8rem !important;
+    line-height: 1.4 !important;
+  }
+}
+
 @media (max-width: 576px) {
   .wanis-ocr__features-grid {
     grid-template-columns: 1fr;
