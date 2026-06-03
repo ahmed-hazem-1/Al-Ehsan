@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ShieldCheck, CheckCircle } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
+import { submitLeadToGoogleSheets } from '../../services/googleSheets';
 
 export default function LeadForm() {
   const { t } = useLanguage();
@@ -15,6 +16,8 @@ export default function LeadForm() {
 
   const [errors, setErrors] = useState({});
   const [submitted, setSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -46,11 +49,19 @@ export default function LeadForm() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     if (validate()) {
-      // Simulate form submission success
-      setSubmitted(true);
+      setIsSubmitting(true);
+      setSubmitError('');
+      const result = await submitLeadToGoogleSheets(formData);
+      setIsSubmitting(false);
+      
+      if (result.success) {
+        setSubmitted(true);
+      } else {
+        setSubmitError(t('form.err.submitFailed') || 'Submission failed. Please try again.');
+      }
     }
   };
 
@@ -171,12 +182,14 @@ export default function LeadForm() {
       </div>
 
       {/* Submit Button */}
+      {submitError && <div className="lead-form__error-summary">{submitError}</div>}
       <button 
         type="submit" 
         id="submit-lead-form"
         className="btn-primary lead-form__submit"
+        disabled={isSubmitting}
       >
-        {t('form.submit')}
+        {isSubmitting ? t('form.submitting') : t('form.submit')}
       </button>
 
       {/* Promise Note */}

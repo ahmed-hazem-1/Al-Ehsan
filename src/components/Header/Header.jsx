@@ -92,6 +92,9 @@ export default function Header({ showMobileCta }) {
                 <a href="#services" className="header__nav-link" onClick={(e) => handleLinkClick(e, 'services')}>{t('nav.services')}</a>
               </li>
               <li>
+                <a href="#wanis-ocr" className="header__nav-link" onClick={(e) => handleLinkClick(e, 'wanis-ocr')}>{t('nav.wanis')}</a>
+              </li>
+              <li>
                 <a href="#why-al-ihsan" className="header__nav-link" onClick={(e) => handleLinkClick(e, 'why-al-ihsan')}>{t('nav.whyUs')}</a>
               </li>
               <li>
@@ -99,7 +102,7 @@ export default function Header({ showMobileCta }) {
               </li>
             </ul>
           </nav>
-
+ 
           <div className="header__actions">
             {/* Language Dropdown */}
             <div className="header__lang-dropdown" ref={dropdownRef}>
@@ -134,7 +137,7 @@ export default function Header({ showMobileCta }) {
                 </ul>
               )}
             </div>
-
+ 
             <button 
               id="header-cta"
               onClick={scrollToContact} 
@@ -143,7 +146,7 @@ export default function Header({ showMobileCta }) {
               <span className="header__cta-desktop">{t('nav.bookConsultation')}</span>
               <span className="header__cta-mobile">{t('nav.bookNow')}</span>
             </button>
-
+ 
             {/* Mobile Menu Toggle Button */}
             <button 
               className="header__menu-toggle" 
@@ -155,7 +158,7 @@ export default function Header({ showMobileCta }) {
             </button>
           </div>
         </div>
-
+ 
         {/* Mobile Navigation Dropdown Links */}
         <nav className={`header__mobile-nav ${isMenuOpen ? 'header__mobile-nav--open' : ''}`}>
           <ul className="header__mobile-nav-list">
@@ -170,6 +173,9 @@ export default function Header({ showMobileCta }) {
             </li>
             <li>
               <a href="#services" className="header__mobile-nav-link" onClick={(e) => handleLinkClick(e, 'services')}>{t('nav.services')}</a>
+            </li>
+            <li>
+              <a href="#wanis-ocr" className="header__mobile-nav-link" onClick={(e) => handleLinkClick(e, 'wanis-ocr')}>{t('nav.wanis')}</a>
             </li>
             <li>
               <a href="#why-al-ihsan" className="header__mobile-nav-link" onClick={(e) => handleLinkClick(e, 'why-al-ihsan')}>{t('nav.whyUs')}</a>

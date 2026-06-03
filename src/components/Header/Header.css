@@ -4,8 +4,8 @@
   /* Float navbar from the top */
   left: 50%;
   transform: translateX(-50%);
-  width: 90%;
-  max-width: 1000px;
+  width: 92%;
+  max-width: 1250px;
   /* More compact maximum width */
   padding: 8px 24px;
   /* Dynamic padding instead of fixed height for breathing room */
@@ -201,7 +201,7 @@
   overflow: visible !important;
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .header__lang-toggle {
     padding: 6px 10px;
     font-size: 0.65rem;
@@ -267,7 +267,7 @@
 }
 
 /* Responsive adjustments */
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .header {
     padding: 8px 12px;
     /* Decreased horizontal padding, increased vertical for safety */
@@ -337,7 +337,7 @@
   list-style: none;
   margin: 0;
   padding: 0;
-  gap: 12px;
+  gap: 16px;
   /* Balanced spacing between links */
 }
 
@@ -361,7 +361,7 @@
   /* Hide on desktop to prevent flex sharing issues */
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1080px) {
   .header__nav {
     display: none;
   }

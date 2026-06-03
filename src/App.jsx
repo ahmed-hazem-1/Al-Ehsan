@@ -6,6 +6,7 @@ import ResultsBar from './components/ResultsBar/ResultsBar';
 import Problem from './components/Problem/Problem';
 import BeforeAfter from './components/BeforeAfter/BeforeAfter';
 import Services from './components/Services/Services';
+import WanisOCR from './components/WanisOCR/WanisOCR';
 import WhyAlIhsan from './components/WhyAlIhsan/WhyAlIhsan';
 import VisionMission from './components/VisionMission/VisionMission';
 import FinalCTA from './components/FinalCTA/FinalCTA';
@@ -64,6 +65,7 @@ export default function App() {
         <Problem />
         <BeforeAfter />
         <Services />
+        <WanisOCR />
         <WhyAlIhsan />
         <VisionMission />
         <FinalCTA />
