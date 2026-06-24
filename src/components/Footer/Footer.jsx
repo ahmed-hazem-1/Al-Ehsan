@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Linkedin } from 'lucide-react';
+import { Phone, MapPin, Facebook } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import logoImg from '../../assets/alehsan-logo.png';
 import './Footer.css';
@@ -40,14 +40,14 @@ export default function Footer() {
             </p>
             <div className="footer__socials">
               <a 
-                href="https://linkedin.com" 
+                href="https://www.facebook.com/profile.php?id=100088036981088" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="footer__social-link"
-                id="footer-social-linkedin"
-                aria-label="LinkedIn Profile"
+                id="footer-social-facebook"
+                aria-label="Facebook Profile"
               >
-                <Linkedin size={18} />
+                <Facebook size={18} />
               </a>
             </div>
           </div>
@@ -83,10 +83,6 @@ export default function Footer() {
                 <span className="footer__contact-text" dir="ltr">+218 91 1234567</span>
               </li>
               <li>
-                <Mail size={16} className="footer__contact-icon" />
-                <span className="footer__contact-text">consult@al-ihsan.com</span>
-              </li>
-              <li>
                 <MapPin size={16} className="footer__contact-icon" />
                 <span className="footer__contact-text">{t('footer.location')}</span>
               </li>
@@ -101,9 +97,6 @@ export default function Footer() {
           <div className="footer__bottom-content">
             <span className="footer__copyright">
               &copy; {currentYear} {t('footer.copyright')}
-            </span>
-            <span className="footer__credits">
-              {t('footer.credits')}
             </span>
           </div>
         </div>
