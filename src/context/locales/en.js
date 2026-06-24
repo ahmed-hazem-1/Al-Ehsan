@@ -9,6 +9,7 @@ const en = {
   'nav.bookConsultation': 'Book Free Consultation',
   'nav.bookNow': 'Book Now',
   'nav.logo': 'Al Ihsan',
+  'nav.usps': 'USPs',
 
   // Hero Section
   'hero.eyebrow': 'Your Healthcare Growth Specialists',
@@ -121,6 +122,19 @@ const en = {
   'purpose.mission.title': 'Our Mission',
   'purpose.mission.text': 'To eliminate the administrative burden on healthcare providers. We optimize profitability and build sustainable systems so you can focus entirely on what matters most: delivering world-class care.',
 
+  // USPs
+  'usps.eyebrow': 'Our USPs',
+  'usps.title': 'Healthcare consulting with disciplined operating standards',
+  'usps.subtitle': 'A focused operating model that combines disciplined financial control, claims expertise, and hands-on execution for healthcare providers.',
+  'usps.item1.title': 'Precision-first diagnostics',
+  'usps.item1.desc': 'We identify the exact revenue leaks, workflow gaps, and payer friction points before recommending any change.',
+  'usps.item2.title': 'Revenue-backed decisions',
+  'usps.item2.desc': 'Every recommendation is tied to measurable impact across collections, margins, claim recovery, and operating visibility.',
+  'usps.item3.title': 'Hands-on implementation',
+  'usps.item3.desc': 'We work alongside your team to install the process, train owners, and make improvements operationally real.',
+  'usps.item4.title': 'Governance that lasts',
+  'usps.item4.desc': 'We build controls, policies, and dashboards that protect gains long after the initial engagement.',
+
   // Final CTA & Form
   'cta.eyebrow': 'Take Action Now',
   'cta.title': 'Stop leaving your hard-earned revenue on the table.',
@@ -194,7 +208,7 @@ const en = {
   'footer.contactInfo': 'Contact Info',
   'footer.location': 'Tripoli, Libya',
   'footer.copyright': 'Al Ihsan. All rights reserved.',
-  'footer.credits': 'Swiss-inspired Healthcare Consulting'
+  'footer.credits': 'Healthcare Consulting with Disciplined Operating Standards'
 };
 
 export default en;

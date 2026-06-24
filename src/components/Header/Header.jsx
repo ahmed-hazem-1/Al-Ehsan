@@ -95,6 +95,9 @@ export default function Header({ showMobileCta }) {
                 <a href="#wanis-ocr" className="header__nav-link" onClick={(e) => handleLinkClick(e, 'wanis-ocr')}>{t('nav.wanis')}</a>
               </li>
               <li>
+                <a href="#usps" className="header__nav-link" onClick={(e) => handleLinkClick(e, 'usps')}>{t('nav.usps')}</a>
+              </li>
+              <li>
                 <a href="#why-al-ihsan" className="header__nav-link" onClick={(e) => handleLinkClick(e, 'why-al-ihsan')}>{t('nav.whyUs')}</a>
               </li>
               <li>
@@ -176,6 +179,9 @@ export default function Header({ showMobileCta }) {
             </li>
             <li>
               <a href="#wanis-ocr" className="header__mobile-nav-link" onClick={(e) => handleLinkClick(e, 'wanis-ocr')}>{t('nav.wanis')}</a>
+            </li>
+            <li>
+              <a href="#usps" className="header__mobile-nav-link" onClick={(e) => handleLinkClick(e, 'usps')}>{t('nav.usps')}</a>
             </li>
             <li>
               <a href="#why-al-ihsan" className="header__mobile-nav-link" onClick={(e) => handleLinkClick(e, 'why-al-ihsan')}>{t('nav.whyUs')}</a>

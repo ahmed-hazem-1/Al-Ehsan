@@ -9,6 +9,7 @@ import Services from './components/Services/Services';
 import WanisOCR from './components/WanisOCR/WanisOCR';
 import WhyAlIhsan from './components/WhyAlIhsan/WhyAlIhsan';
 import VisionMission from './components/VisionMission/VisionMission';
+import USPs from './components/USPs/USPs';
 import FinalCTA from './components/FinalCTA/FinalCTA';
 import Footer from './components/Footer/Footer';
 import useInView from './hooks/useInView';
@@ -68,6 +69,7 @@ export default function App() {
         <WanisOCR />
         <WhyAlIhsan />
         <VisionMission />
+        <USPs />
         <FinalCTA />
       </main>
       <Footer />

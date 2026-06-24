@@ -1,0 +1,212 @@
+.usps-section {
+  background:
+    radial-gradient(circle at 12% 18%, rgba(124, 58, 237, 0.12), transparent 30%),
+    linear-gradient(135deg, var(--heading-ink) 0%, #2D1B5F 48%, var(--primary-deep) 100%);
+  overflow: hidden;
+}
+
+.usps-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.045) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), transparent 80%);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.85), transparent 80%);
+  pointer-events: none;
+}
+
+.usps__container {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2xl);
+}
+
+.usps__header {
+  max-width: 760px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.usps__eyebrow {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.08);
+  color: #E9D5FF;
+  padding: 6px 16px;
+  border-radius: 100px;
+  font-size: var(--text-small);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border: 1px solid rgba(233, 213, 255, 0.2);
+  margin-bottom: var(--space-md);
+}
+
+.usps__title {
+  color: var(--bg-white);
+  font-size: var(--text-section-title);
+  line-height: 1.2;
+  letter-spacing: -0.025em;
+  margin-bottom: var(--space-md);
+}
+
+.usps__subtitle {
+  color: #D1CFDC;
+  font-size: 1.05rem;
+  line-height: 1.65;
+  margin: 0;
+}
+
+.usps__marquee {
+  --usps-marquee-gap: var(--space-md);
+  --usps-card-width: clamp(260px, 24vw, 320px);
+
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  padding: var(--space-xs) 0;
+}
+
+.usps__marquee-track {
+  display: flex;
+  gap: 0;
+  width: max-content;
+  position: relative;
+  margin-left: auto;
+  margin-right: 0;
+  animation: usps-marquee 18s linear infinite;
+}
+
+.usps__marquee:hover .usps__marquee-track {
+  animation-play-state: paused;
+}
+
+.usps__marquee-group {
+  display: flex;
+  gap: var(--usps-marquee-gap);
+  padding-inline-end: var(--usps-marquee-gap);
+  flex: 0 0 auto;
+}
+
+.usps__card {
+  width: var(--usps-card-width);
+  min-height: 260px;
+  padding: var(--space-lg);
+  border-radius: 22px;
+  border: 1px solid rgba(233, 213, 255, 0.18);
+  background: rgba(255, 255, 255, 0.075);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: start;
+  transition: border-color var(--transition-speed) ease, background-color var(--transition-speed) ease, transform var(--transition-speed) ease;
+  flex: 0 0 auto;
+}
+
+.usps__card:hover {
+  border-color: rgba(233, 213, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.11);
+  transform: translateY(-3px);
+}
+
+.usps__icon-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #E9D5FF;
+  margin-bottom: var(--space-md);
+  border: 1px solid rgba(233, 213, 255, 0.18);
+}
+
+.usps__card-title {
+  color: var(--bg-white);
+  font-size: 1.08rem;
+  line-height: 1.3;
+  margin: 0 0 var(--space-sm) 0;
+}
+
+.usps__card-desc {
+  color: #D1CFDC;
+  font-size: 0.9rem;
+  line-height: 1.58;
+  margin: 0;
+}
+
+.usps__header.is-visible .fade-up,
+.usps__marquee.is-visible .usps__card {
+  opacity: 1;
+}
+
+@keyframes usps-marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(33.333333%);
+  }
+}
+
+@media (max-width: 992px) {
+  .usps__marquee {
+    --usps-card-width: clamp(250px, 42vw, 310px);
+  }
+
+  .usps__card {
+    min-height: 230px;
+  }
+}
+
+@media (max-width: 768px) {
+  .usps-section {
+    padding-top: var(--space-2xl);
+    padding-bottom: var(--space-2xl);
+  }
+
+  .usps__container {
+    gap: var(--space-lg);
+  }
+
+  .usps__header {
+    padding: 0 var(--space-xs);
+  }
+
+  .usps__subtitle {
+    font-size: 0.95rem;
+  }
+
+  .usps__marquee {
+    --usps-marquee-gap: var(--space-sm);
+    --usps-card-width: min(78vw, 300px);
+
+    width: calc(100% + var(--space-md) * 2);
+    margin: 0 calc(var(--space-md) * -1);
+  }
+
+  .usps__marquee-track {
+    animation-duration: 16s;
+  }
+
+  .usps__card {
+    min-height: 0;
+    padding: var(--space-md);
+  }
+
+  .usps__icon-wrapper {
+    width: 42px;
+    height: 42px;
+    margin-bottom: var(--space-sm);
+  }
+}

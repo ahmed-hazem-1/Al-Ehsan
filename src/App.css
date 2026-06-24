@@ -255,6 +255,7 @@ main {
   .services__title,
   .why__title,
   .vision-mission__title,
+  .usps__title,
   .final-cta__title {
     font-size: clamp(1.6rem, 5vw, 2.2rem) !important;
   }
@@ -267,6 +268,7 @@ main {
   .services__title,
   .why__title,
   .vision-mission__title,
+  .usps__title,
   .final-cta__title {
     font-size: clamp(1.4rem, 6vw, 1.7rem) !important;
   }
@@ -288,4 +290,3 @@ main {
     left: 16px;
   }
 }
-

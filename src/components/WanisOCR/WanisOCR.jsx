@@ -83,7 +83,7 @@ export default function WanisOCR() {
             </p>
             <div className={`wanis-ocr__ctas fade-up ${inView ? 'is-visible' : ''}`} style={{ transitionDelay: '300ms' }}>
               <a 
-                href="https://ahmed-hazem-1.github.io/Wanis-OCR/" 
+                href="https://app.alehsan.online" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="btn-primary wanis-ocr__cta-btn"
