@@ -253,7 +253,7 @@
 
 .wanis-ocr__features-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: var(--space-md);
   width: 100%;
 }

@@ -80,7 +80,7 @@ export default function Footer() {
             <ul className="footer__contact-list">
               <li>
                 <Phone size={16} className="footer__contact-icon" />
-                <span className="footer__contact-text" dir="ltr">+218 91 1234567</span>
+                <span className="footer__contact-text" dir="ltr">0910202873 / +218 91 1234567</span>
               </li>
               <li>
                 <MapPin size={16} className="footer__contact-icon" />

@@ -52,98 +52,13 @@
   margin: 0;
 }
 
-/* 6-Card Grid Layout */
-.problem__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-lg);
-  width: 100%;
-  max-width: 1100px;
-  margin-bottom: var(--space-3xl);
-}
-
-/* Individual Card Styles */
-.problem__card {
-  background-color: var(--surface-card);
-  border: 1px solid var(--border-soft);
-  border-radius: var(--border-radius-card);
-  padding: var(--space-lg);
-  text-align: start;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
-}
-
-.problem__card:hover {
-  border-color: var(--accent);
-  box-shadow: 0 8px 30px rgba(91, 33, 182, 0.035);
-}
-
-.problem__card-icon-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 10px;
-  background-color: var(--bg-soft);
-  color: var(--accent);
-  margin-bottom: var(--space-md);
-  flex-shrink: 0;
-}
-
-.problem__card-title {
-  font-size: var(--text-card-title);
-  font-weight: 600;
-  color: var(--heading-ink);
-  margin: 0 0 var(--space-xs) 0;
-  line-height: 1.3;
-}
-
-.problem__card-desc {
-  font-size: 0.875rem;
-  line-height: 1.5;
-  color: var(--body-gray);
-  margin: 0;
-}
-
-/* Blockquote Quote Styles */
-.problem__quote-wrapper {
-  width: 100%;
-  max-width: 800px;
-  display: flex;
-  justify-content: center;
-}
-
-.problem__quote {
-  font-size: clamp(1.15rem, 1.8vw, 1.45rem);
-  font-weight: 500;
-  line-height: 1.5;
-  color: var(--primary);
-  margin: 0;
-  padding: 0 var(--space-lg);
-  border-left: 3px solid var(--accent);
-  text-align: start;
-  font-style: italic;
-}
-
 /* Animations Triggers */
-.problem__content.is-visible .fade-up,
-.problem__grid.is-visible .scale-in,
-.problem__quote-wrapper.is-visible .fade-up {
+.problem__content.is-visible .fade-up {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 
 /* Responsive Grid Adjustments */
-@media (max-width: 992px) {
-  .problem__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
-  }
-}
-
 @media (max-width: 768px) {
   .problem-section {
     padding-top: var(--space-2xl);
@@ -159,22 +74,4 @@
     font-size: 1.6rem;
   }
 
-  .problem__grid {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-    margin-bottom: var(--space-2xl);
-    padding: 0 var(--space-xs);
-  }
-
-  .problem__quote {
-    padding: 0 var(--space-md);
-    font-size: 1.1rem;
-  }
 }
-
-/* RTL Quote Border */
-[dir="rtl"] .problem__quote {
-  border-left: none;
-  border-right: 3px solid var(--accent);
-}
-

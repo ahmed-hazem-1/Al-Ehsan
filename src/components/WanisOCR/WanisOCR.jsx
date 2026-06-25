@@ -1,8 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { 
   Play, Pause, Volume2, VolumeX, Maximize, ExternalLink,
-  Cpu, ClipboardList, Briefcase, FileText, FolderTree, Sliders, 
-  Stethoscope, Activity, ShieldCheck, RefreshCw, Eye, BarChart3 
+  Cpu, Sliders, FileText, MonitorCog, ShieldCheck
 } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import useInView from '../../hooks/useInView';
@@ -48,17 +47,10 @@ export default function WanisOCR() {
 
   const features = [
     { id: 'aiOcr', icon: <Cpu size={20} /> },
-    { id: 'claims', icon: <ClipboardList size={20} /> },
-    { id: 'company', icon: <Briefcase size={20} /> },
-    { id: 'contracts', icon: <FileText size={20} /> },
-    { id: 'classification', icon: <FolderTree size={20} /> },
     { id: 'rules', icon: <Sliders size={20} /> },
-    { id: 'catalog', icon: <Stethoscope size={20} /> },
-    { id: 'provider', icon: <Activity size={20} /> },
-    { id: 'auth', icon: <ShieldCheck size={20} /> },
-    { id: 'queue', icon: <RefreshCw size={20} /> },
-    { id: 'review', icon: <Eye size={20} /> },
-    { id: 'analytics', icon: <BarChart3 size={20} /> },
+    { id: 'contracts', icon: <FileText size={20} /> },
+    { id: 'monitoring', icon: <MonitorCog size={20} /> },
+    { id: 'auth', icon: <ShieldCheck size={20} /> }
   ];
 
   return (

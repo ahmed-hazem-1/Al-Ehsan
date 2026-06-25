@@ -52,18 +52,17 @@
   margin: 0;
 }
 
-/* 3 Pillars Equal Height Grid */
-.services__grid {
+/* Service Groups */
+.services__groups {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: var(--space-lg);
   width: 100%;
   max-width: 1100px;
-  align-items: stretch; /* Equal height cards */
+  align-items: stretch;
 }
 
-/* Pillar Card Styles */
-.services__card {
+.services__group {
   background-color: var(--surface-card);
   border: 1px solid var(--border-soft);
   border-radius: var(--border-radius-card);
@@ -71,20 +70,19 @@
   text-align: start;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  position: relative; /* Contain accent line */
-  overflow: hidden; /* Clips top corner border-radius */
+  position: relative;
+  overflow: hidden;
   box-shadow: 0 4px 20px rgba(91, 33, 182, 0.015);
   transition: border-color var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
 }
 
-.services__card:hover {
+.services__group:hover {
   border-color: var(--accent);
   box-shadow: 0 8px 30px rgba(91, 33, 182, 0.035);
 }
 
-/* Top Accent Line (Minimal and High-end) */
-.services__card-accent {
+.services__group::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -93,20 +91,7 @@
   background-color: var(--accent);
 }
 
-.services__card-icon-wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  background-color: var(--bg-soft);
-  color: var(--primary);
-  margin-bottom: var(--space-lg);
-  flex-shrink: 0;
-}
-
-.services__card-title {
+.services__group-title {
   font-size: var(--text-card-title);
   font-weight: 700;
   color: var(--heading-ink);
@@ -114,51 +99,65 @@
   line-height: 1.3;
 }
 
-/* Bullet Points */
-.services__card-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.services__features {
   display: flex;
   flex-direction: column;
   gap: var(--space-md);
-  width: 100%;
 }
 
-.services__card-item {
+.services__feature {
   display: flex;
   align-items: flex-start;
-  gap: var(--space-sm);
+  gap: var(--space-md);
+  padding: var(--space-md);
+  background-color: var(--bg-white);
+  border: 1px solid var(--border-soft);
+  border-radius: calc(var(--border-radius-card) - 8px);
 }
 
-.services__card-item-check {
-  color: var(--accent);
-  margin-top: 3px;
+.services__feature-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background-color: var(--bg-soft);
+  color: var(--primary);
   flex-shrink: 0;
 }
 
-.services__card-item-text {
-  font-size: 0.9rem;
-  line-height: 1.4;
+.services__feature-title {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--heading-ink);
+  line-height: 1.35;
+  margin: 0 0 var(--space-xs) 0;
+}
+
+.services__feature-text {
+  font-size: 0.92rem;
+  line-height: 1.55;
   color: var(--body-gray);
+  margin: 0;
 }
 
 /* Entrance Animations */
 .services__content.is-visible .fade-up,
-.services__grid.is-visible .scale-in {
+.services__groups.is-visible .scale-in {
   opacity: 1;
   transform: translateY(0) scale(1);
 }
 
 /* Responsive Pillar Grid */
 @media (max-width: 992px) {
-  .services__grid {
+  .services__groups {
     grid-template-columns: 1fr;
     gap: var(--space-md);
     padding: 0 var(--space-xs);
   }
 
-  .services__card {
+  .services__group {
     padding: var(--space-lg) var(--space-md);
   }
 }
@@ -201,31 +200,38 @@
     font-size: 0.95rem;
   }
 
-  .services__card {
+  .services__group {
     padding: var(--space-lg) var(--space-md) var(--space-md) var(--space-md);
   }
 
-  .services__card-icon-wrapper {
-    width: 40px;
-    height: 40px;
-    margin-bottom: var(--space-sm);
-  }
-
-  .services__card-icon-wrapper svg {
-    width: 20px;
-    height: 20px;
-  }
-
-  .services__card-title {
+  .services__group-title {
     font-size: 1.15rem;
     margin: 0 0 var(--space-sm) 0;
   }
 
-  .services__card-list {
+  .services__features {
     gap: var(--space-xs);
   }
 
-  .services__card-item-text {
+  .services__feature {
+    padding: var(--space-sm);
+  }
+
+  .services__feature-icon {
+    width: 36px;
+    height: 36px;
+  }
+
+  .services__feature-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .services__feature-title {
+    font-size: 0.95rem;
+  }
+
+  .services__feature-text {
     font-size: 0.825rem;
     line-height: 1.35;
   }

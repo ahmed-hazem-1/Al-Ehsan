@@ -4,7 +4,6 @@ import Header from './components/Header/Header';
 import Hero from './components/Hero/Hero';
 import ResultsBar from './components/ResultsBar/ResultsBar';
 import Problem from './components/Problem/Problem';
-import BeforeAfter from './components/BeforeAfter/BeforeAfter';
 import Services from './components/Services/Services';
 import WanisOCR from './components/WanisOCR/WanisOCR';
 import WhyAlIhsan from './components/WhyAlIhsan/WhyAlIhsan';
@@ -64,7 +63,6 @@ export default function App() {
         <Hero heroRef={heroRef} animate={animateHero} />
         <ResultsBar />
         <Problem />
-        <BeforeAfter />
         <Services />
         <WanisOCR />
         <WhyAlIhsan />

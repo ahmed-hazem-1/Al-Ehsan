@@ -73,8 +73,8 @@ const en = {
   'beforeAfter.after4': 'Scalable, structured, and predictable growth',
 
   // Services
-  'services.eyebrow': 'Our Expertise',
-  'services.title': 'Three Pillars of Healthcare Profitability',
+  'services.eyebrow': 'خدمات الإحسان الشاملة',
+  'services.title': 'منظومة متكاملة لنمو وحوكمة الرعاية الصحية',
   'services.subtitle': 'We don’t just consult; we execute. Our targeted interventions across billing, payer relations, and workflow systems build resilient, high-margin operations.',
   'services.pillar1.title': 'Revenue Recovery & Cash Flow',
   'services.pillar1.p1': 'Audit your entire billing cycle to find trapped cash',
@@ -189,6 +189,8 @@ const en = {
   'wanis.feature.classification.desc': 'Instantly recognize document types (invoices, referrals, IDs) and route them to the correct workflow.',
   'wanis.feature.rules.title': 'Automated Audit Engine',
   'wanis.feature.rules.desc': 'Instantly flag duplicates, pricing discrepancies, and unauthorized treatments before payments occur.',
+  'wanis.feature.monitoring.title': 'بوابة موحدة ومراقبة لحظية',
+  'wanis.feature.monitoring.desc': 'شاشة واحدة لإدارة عقود شركات التأمين، الاتفاقيات، ومتابعة الطلبات الجارية ومعدلات الموافقة فوراً.',
   'wanis.feature.catalog.title': 'Standardized Code Matching',
   'wanis.feature.catalog.desc': 'Cross-reference clinical items against standardized medical databases to ensure billing accuracy.',
   'wanis.feature.provider.title': 'Provider Network Alignment',

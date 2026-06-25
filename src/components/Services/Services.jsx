@@ -1,7 +1,6 @@
 import React from 'react';
-import { DollarSign, Handshake, ShieldCheck } from 'lucide-react';
+import { FileText, Globe2, LineChart, ReceiptText, Scale, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
-import PillarCard from './PillarCard';
 import useInView from '../../hooks/useInView';
 import './Services.css';
 
@@ -9,39 +8,45 @@ export default function Services() {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
   const { t } = useLanguage();
 
-  const pillars = [
+  const groups = [
     {
-      icon: <DollarSign size={24} />,
-      title: t('services.pillar1.title'),
-      points: [
-        t('services.pillar1.p1'),
-        t('services.pillar1.p2'),
-        t('services.pillar1.p3'),
-        t('services.pillar1.p4'),
-        t('services.pillar1.p5')
+      title: t('services.group1.title'),
+      services: [
+        {
+          icon: <ShieldCheck size={22} />,
+          title: t('services.group1.item1.title'),
+          text: t('services.group1.item1.text')
+        },
+        {
+          icon: <FileText size={22} />,
+          title: t('services.group1.item2.title'),
+          text: t('services.group1.item2.text')
+        },
+        {
+          icon: <Globe2 size={22} />,
+          title: t('services.group1.item3.title'),
+          text: t('services.group1.item3.text')
+        }
       ]
     },
     {
-      icon: <Handshake size={24} />,
-      title: t('services.pillar2.title'),
-      points: [
-        t('services.pillar2.p1'),
-        t('services.pillar2.p2'),
-        t('services.pillar2.p3'),
-        t('services.pillar2.p4'),
-        t('services.pillar2.p5')
-      ]
-    },
-    {
-      icon: <ShieldCheck size={24} />,
-      title: t('services.pillar3.title'),
-      points: [
-        t('services.pillar3.p1'),
-        t('services.pillar3.p2'),
-        t('services.pillar3.p3'),
-        t('services.pillar3.p4'),
-        t('services.pillar3.p5'),
-        t('services.pillar3.p6')
+      title: t('services.group2.title'),
+      services: [
+        {
+          icon: <ReceiptText size={22} />,
+          title: t('services.group2.item1.title'),
+          text: t('services.group2.item1.text')
+        },
+        {
+          icon: <Scale size={22} />,
+          title: t('services.group2.item2.title'),
+          text: t('services.group2.item2.text')
+        },
+        {
+          icon: <LineChart size={22} />,
+          title: t('services.group2.item3.title'),
+          text: t('services.group2.item3.text')
+        }
       ]
     }
   ];
@@ -58,21 +63,30 @@ export default function Services() {
           <h2 className="services__title fade-up" style={{ transitionDelay: '100ms' }}>
             {t('services.title')}
           </h2>
-          <p className="services__subtitle fade-up" style={{ transitionDelay: '200ms' }}>
-            {t('services.subtitle')}
-          </p>
         </div>
 
-        {/* 3-Column Pillars Grid */}
-        <div className={`services__grid ${inView ? 'is-visible' : ''}`}>
-          {pillars.map((pillar, i) => (
-            <PillarCard 
-              key={i}
-              index={i}
-              icon={pillar.icon}
-              title={pillar.title}
-              points={pillar.points}
-            />
+        <div className={`services__groups ${inView ? 'is-visible' : ''}`}>
+          {groups.map((group, groupIndex) => (
+            <article
+              key={group.title}
+              className="services__group scale-in"
+              style={{ transitionDelay: `${250 + groupIndex * 180}ms` }}
+            >
+              <h3 className="services__group-title">{group.title}</h3>
+              <div className="services__features">
+                {group.services.map((service) => (
+                  <div key={service.title} className="services__feature">
+                    <div className="services__feature-icon">
+                      {service.icon}
+                    </div>
+                    <div>
+                      <h4 className="services__feature-title">{service.title}</h4>
+                      <p className="services__feature-text">{service.text}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </article>
           ))}
         </div>
 
