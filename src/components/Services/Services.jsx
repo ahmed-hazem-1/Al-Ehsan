@@ -1,5 +1,5 @@
 import React from 'react';
-import { Briefcase, FileSearch, ClipboardCheck, BarChart3 } from 'lucide-react';
+import { DollarSign, Handshake, ShieldCheck } from 'lucide-react';
 import { useLanguage } from '../../context/LanguageContext';
 import PillarCard from './PillarCard';
 import useInView from '../../hooks/useInView';
@@ -11,7 +11,7 @@ export default function Services() {
 
   const pillars = [
     {
-      icon: <Briefcase size={24} />,
+      icon: <DollarSign size={24} />,
       title: t('services.pillar1.title'),
       points: [
         t('services.pillar1.p1'),
@@ -22,7 +22,7 @@ export default function Services() {
       ]
     },
     {
-      icon: <FileSearch size={24} />,
+      icon: <Handshake size={24} />,
       title: t('services.pillar2.title'),
       points: [
         t('services.pillar2.p1'),
@@ -33,25 +33,15 @@ export default function Services() {
       ]
     },
     {
-      icon: <ClipboardCheck size={24} />,
+      icon: <ShieldCheck size={24} />,
       title: t('services.pillar3.title'),
       points: [
         t('services.pillar3.p1'),
         t('services.pillar3.p2'),
         t('services.pillar3.p3'),
         t('services.pillar3.p4'),
-        t('services.pillar3.p5')
-      ]
-    },
-    {
-      icon: <BarChart3 size={24} />,
-      title: t('services.pillar4.title'),
-      points: [
-        t('services.pillar4.p1'),
-        t('services.pillar4.p2'),
-        t('services.pillar4.p3'),
-        t('services.pillar4.p4'),
-        t('services.pillar4.p5')
+        t('services.pillar3.p5'),
+        t('services.pillar3.p6')
       ]
     }
   ];
@@ -73,7 +63,7 @@ export default function Services() {
           </p>
         </div>
 
-        {/* Service Pillars Grid */}
+        {/* 3-Column Pillars Grid */}
         <div className={`services__grid ${inView ? 'is-visible' : ''}`}>
           {pillars.map((pillar, i) => (
             <PillarCard 
@@ -90,3 +80,4 @@ export default function Services() {
     </section>
   );
 }
+
