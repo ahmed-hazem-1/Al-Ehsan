@@ -6,7 +6,7 @@ import './ResultsBar.css';
 
 export default function ResultsBar() {
   const [ref, inView] = useInView({ threshold: 0.1, triggerOnce: true });
-  const { t, lang } = useLanguage();
+  const { t } = useLanguage();
 
   return (
     <section ref={ref} className="section results-section" id="results">
@@ -41,7 +41,7 @@ export default function ResultsBar() {
                   <span className="results__card-label">{t('results.financialGrowth')}</span>
                 </div>
                 <div className="results__card-body">
-                  <span className="results__card-metric">{(lang === 'ar' || lang === 'ly' || lang === 'sa') ? '38%+' : '+38%'}</span>
+                  <span className="results__card-metric">{t('results.mainMetric')}</span>
                   <p className="results__card-text">{t('results.avgRevenueGrowth')}</p>
                 </div>
               </div>
@@ -86,7 +86,7 @@ export default function ResultsBar() {
                 <span className="results__card-label">{t('results.contractsLabel')}</span>
               </div>
               <div className="results__card-body">
-                <span className="results__card-metric">{lang === 'ar' ? '120+' : '120+'}</span>
+                <span className="results__card-metric">{t('results.secondaryMetric')}</span>
                 <p className="results__card-text">{t('results.contractsText')}</p>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function ResultsBar() {
                 <span className="results__card-label">{t('results.efficiencyLabel')}</span>
               </div>
               <div className="results__card-body">
-                <span className="results__card-metric">{(lang === 'ar' || lang === 'ly' || lang === 'sa') ? '14 يوماً-' : '-14 Days'}</span>
+                <span className="results__card-metric">{t('results.tertiaryMetric')}</span>
                 <p className="results__card-text">{t('results.efficiencyText')}</p>
               </div>
             </div>
@@ -113,4 +113,3 @@ export default function ResultsBar() {
     </section>
   );
 }
-

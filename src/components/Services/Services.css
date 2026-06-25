@@ -52,10 +52,10 @@
   margin: 0;
 }
 
-/* 3 Pillars Equal Height Grid */
+/* Service Pillars Equal Height Grid */
 .services__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: var(--space-lg);
   width: 100%;
   max-width: 1100px;
@@ -153,13 +153,19 @@
 /* Responsive Pillar Grid */
 @media (max-width: 992px) {
   .services__grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--space-md);
     padding: 0 var(--space-xs);
   }
 
   .services__card {
     padding: var(--space-lg) var(--space-md);
+  }
+}
+
+@media (max-width: 640px) {
+  .services__grid {
+    grid-template-columns: 1fr;
   }
 }
 

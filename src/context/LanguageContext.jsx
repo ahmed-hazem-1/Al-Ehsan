@@ -32,82 +32,82 @@ export function LanguageProvider({ children }) {
     // SEO Meta updates
     if (lang === 'ar' || lang === 'ly' || lang === 'sa' || lang === 'eg') {
       document.title = lang === 'sa'
-        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في السعودية'
+        ? 'الإحسان — إدارة الصناديق الصحية ومراجعة مطالبات الشركات في السعودية'
         : lang === 'ly'
-        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في ليبيا'
+        ? 'الإحسان — إدارة الصناديق الصحية ومراجعة مطالبات الشركات في ليبيا'
         : lang === 'eg'
-        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في مصر'
-        : 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية';
+        ? 'الإحسان — إدارة الصناديق الصحية ومراجعة مطالبات الشركات في مصر'
+        : 'الإحسان — إدارة الصناديق الصحية ومراجعة مطالبات الشركات';
       const desc = document.querySelector('meta[name="description"]');
       if (desc) desc.setAttribute('content', lang === 'sa'
-        ? 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان في الرياض والسعودية.'
+        ? 'ندير صناديق الرعاية الصحية للشركات ونراجع فواتير المستشفيات والمطالبات الطبية قبل الدفع لصالح أصحاب العمل في السعودية.'
         : lang === 'ly'
-        ? 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان في طرابلس وليبيا.'
+        ? 'ندير صناديق الرعاية الصحية للشركات ونراجع فواتير المستشفيات والمطالبات الطبية قبل الدفع لصالح أصحاب العمل في ليبيا.'
         : lang === 'eg'
-        ? 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان في القاهرة ومصر.'
-        : 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان.');
+        ? 'ندير صناديق الرعاية الصحية للشركات ونراجع فواتير المستشفيات والمطالبات الطبية قبل الدفع لصالح أصحاب العمل في مصر.'
+        : 'ندير صناديق الرعاية الصحية للشركات ونراجع فواتير المستشفيات والمطالبات الطبية قبل الدفع لصالح أصحاب العمل.');
       
       const ogTitle = document.querySelector('meta[property="og:title"]');
       if (ogTitle) ogTitle.setAttribute('content', lang === 'sa'
-        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في السعودية'
+        ? 'الإحسان — إدارة الصناديق الصحية ومراجعة مطالبات الشركات في السعودية'
         : lang === 'ly'
-        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في ليبيا'
+        ? 'الإحسان — إدارة الصناديق الصحية ومراجعة مطالبات الشركات في ليبيا'
         : lang === 'eg'
-        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في مصر'
-        : 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية');
+        ? 'الإحسان — إدارة الصناديق الصحية ومراجعة مطالبات الشركات في مصر'
+        : 'الإحسان — إدارة الصناديق الصحية ومراجعة مطالبات الشركات');
       const ogDesc = document.querySelector('meta[property="og:description"]');
       if (ogDesc) ogDesc.setAttribute('content', lang === 'sa'
-        ? 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان في الرياض والسعودية.'
+        ? 'ندير صناديق الرعاية الصحية للشركات ونراجع فواتير المستشفيات والمطالبات الطبية قبل الدفع لصالح أصحاب العمل في السعودية.'
         : lang === 'ly'
-        ? 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان في طرابلس وليبيا.'
+        ? 'ندير صناديق الرعاية الصحية للشركات ونراجع فواتير المستشفيات والمطالبات الطبية قبل الدفع لصالح أصحاب العمل في ليبيا.'
         : lang === 'eg'
-        ? 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان في القاهرة ومصر.'
-        : 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان.');
+        ? 'ندير صناديق الرعاية الصحية للشركات ونراجع فواتير المستشفيات والمطالبات الطبية قبل الدفع لصالح أصحاب العمل في مصر.'
+        : 'ندير صناديق الرعاية الصحية للشركات ونراجع فواتير المستشفيات والمطالبات الطبية قبل الدفع لصالح أصحاب العمل.');
       
       const twTitle = document.querySelector('meta[name="twitter:title"]');
       if (twTitle) twTitle.setAttribute('content', lang === 'sa'
-        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في السعودية'
+        ? 'الإحسان — إدارة الصناديق الصحية ومراجعة مطالبات الشركات في السعودية'
         : lang === 'ly'
-        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في ليبيا'
+        ? 'الإحسان — إدارة الصناديق الصحية ومراجعة مطالبات الشركات في ليبيا'
         : lang === 'eg'
-        ? 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية في مصر'
-        : 'الإحسان — شركة استشارات نمو إيرادات الرعاية الصحية');
+        ? 'الإحسان — إدارة الصناديق الصحية ومراجعة مطالبات الشركات في مصر'
+        : 'الإحسان — إدارة الصناديق الصحية ومراجعة مطالبات الشركات');
       const twDesc = document.querySelector('meta[name="twitter:description"]');
       if (twDesc) twDesc.setAttribute('content', lang === 'sa'
-        ? 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان في الرياض والسعودية.'
+        ? 'ندير صناديق الرعاية الصحية للشركات ونراجع فواتير المستشفيات والمطالبات الطبية قبل الدفع لصالح أصحاب العمل في السعودية.'
         : lang === 'ly'
-        ? 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان في طرابلس وليبيا.'
+        ? 'ندير صناديق الرعاية الصحية للشركات ونراجع فواتير المستشفيات والمطالبات الطبية قبل الدفع لصالح أصحاب العمل في ليبيا.'
         : lang === 'eg'
-        ? 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان في القاهرة ومصر.'
-        : 'كشف تسربات الإيرادات، تحسين عقود شركات التأمين، وتسريع التحصيل. احجز استشارة مجانية مع الإحسان.');
+        ? 'ندير صناديق الرعاية الصحية للشركات ونراجع فواتير المستشفيات والمطالبات الطبية قبل الدفع لصالح أصحاب العمل في مصر.'
+        : 'ندير صناديق الرعاية الصحية للشركات ونراجع فواتير المستشفيات والمطالبات الطبية قبل الدفع لصالح أصحاب العمل.');
     } else if (lang === 'bn') {
-      document.title = 'আল ইহসান — স্বাস্থ্যসেবা রাজস্ব প্রবৃদ্ধি এবং পরামর্শকারী প্রতিষ্ঠান';
+      document.title = 'Al Ihsan — Healthcare Fund Management and Claims Review';
       const desc = document.querySelector('meta[name="description"]');
-      if (desc) desc.setAttribute('content', 'লুকানো রাজস্ব উন্মোচন করুন, বীমা চুক্তি অপ্টিমাইজ করুন এবং বকেয়া সংগ্রহ দ্রুত করুন। আল ইহসানের সাথে একটি ফ্রি পরামর্শ বুক করুন।');
+      if (desc) desc.setAttribute('content', 'We manage healthcare funds for employers and review hospital invoices and medical claims before payment.');
       
       const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute('content', 'আল ইহসান — স্বাস্থ্যসেবা রাজস্ব প্রবৃদ্ধি এবং পরামর্শকারী প্রতিষ্ঠান');
+      if (ogTitle) ogTitle.setAttribute('content', 'Al Ihsan — Healthcare Fund Management and Claims Review');
       const ogDesc = document.querySelector('meta[property="og:description"]');
-      if (ogDesc) ogDesc.setAttribute('content', 'লুকানো রাজস্ব উন্মোচন করুন, বীমা চুক্তি অপ্টিমাইজ করুন এবং বকেয়া সংগ্রহ দ্রুত করুন। আল ইহসানের সাথে একটি ফ্রি পরামর্শ বুক করুন।');
+      if (ogDesc) ogDesc.setAttribute('content', 'We manage healthcare funds for employers and review hospital invoices and medical claims before payment.');
       
       const twTitle = document.querySelector('meta[name="twitter:title"]');
-      if (twTitle) twTitle.setAttribute('content', 'আল ইহসান — স্বাস্থ্যসেবা রাজস্ব প্রবৃদ্ধি এবং পরামর্শকারী প্রতিষ্ঠান');
+      if (twTitle) twTitle.setAttribute('content', 'Al Ihsan — Healthcare Fund Management and Claims Review');
       const twDesc = document.querySelector('meta[name="twitter:description"]');
-      if (twDesc) twDesc.setAttribute('content', 'লুকানো রাজস্ব উন্মোচন করুন, বীমা চুক্তি অপ্টিমাইজ করুন এবং বকেয়া সংগ্রহ দ্রুত করুন। আল ইহসানের সাথে একটি ফ্রি পরামর্শ বুক করুন।');
+      if (twDesc) twDesc.setAttribute('content', 'We manage healthcare funds for employers and review hospital invoices and medical claims before payment.');
     } else {
-      document.title = 'Al Ihsan — Healthcare Revenue Growth & Consulting Firm';
+      document.title = 'Al Ihsan — Healthcare Fund Management and Claims Review';
       const desc = document.querySelector('meta[name="description"]');
-      if (desc) desc.setAttribute('content', 'Uncover hidden revenue, optimize contracts, and accelerate collections. Book a free consultation with Al Ihsan.');
+      if (desc) desc.setAttribute('content', 'We manage healthcare funds for employers and review hospital invoices and medical claims before payment.');
       
       const ogTitle = document.querySelector('meta[property="og:title"]');
-      if (ogTitle) ogTitle.setAttribute('content', 'Al Ihsan — Healthcare Revenue Growth & Consulting Firm');
+      if (ogTitle) ogTitle.setAttribute('content', 'Al Ihsan — Healthcare Fund Management and Claims Review');
       const ogDesc = document.querySelector('meta[property="og:description"]');
-      if (ogDesc) ogDesc.setAttribute('content', 'Uncover hidden revenue, optimize contracts, and accelerate collections. Book a free consultation with Al Ihsan.');
+      if (ogDesc) ogDesc.setAttribute('content', 'We manage healthcare funds for employers and review hospital invoices and medical claims before payment.');
       
       const twTitle = document.querySelector('meta[name="twitter:title"]');
-      if (twTitle) twTitle.setAttribute('content', 'Al Ihsan — Healthcare Revenue Growth & Consulting Firm');
+      if (twTitle) twTitle.setAttribute('content', 'Al Ihsan — Healthcare Fund Management and Claims Review');
       const twDesc = document.querySelector('meta[name="twitter:description"]');
-      if (twDesc) twDesc.setAttribute('content', 'Uncover hidden revenue, optimize contracts, and accelerate collections. Book a free consultation with Al Ihsan.');
+      if (twDesc) twDesc.setAttribute('content', 'We manage healthcare funds for employers and review hospital invoices and medical claims before payment.');
     }
   }, [lang]);
 
