@@ -13,13 +13,13 @@ const en = {
 
   // Hero Section
   'hero.eyebrow': 'Your Healthcare Growth Specialists',
-  'hero.static1': 'Are you losing',
-  'hero.static2': 'while operating at full capacity?',
-  'hero.rotator.growth': 'Revenue',
-  'hero.rotator.profit': 'Insurance Claims',
-  'hero.rotator.contracts': 'Profit Margins',
-  'hero.rotator.efficiency': 'Operating Cash',
-  'hero.subtitle': 'You don’t need more patients to increase profit—you need tighter operations. We plug hidden administrative leaks, renegotiate weak contracts, and recover the revenue your facility has already earned.',
+  'hero.static1': "We don't just manage claims... we protect your profits and stop revenue leakage.",
+  'hero.static2': '',
+  'hero.rotator.growth': '',
+  'hero.rotator.profit': '',
+  'hero.rotator.contracts': '',
+  'hero.rotator.efficiency': '',
+  'hero.subtitle': 'We integrate proactive auditing (TPA) and AI into the core of your operations to prevent waste, plug billing gaps, and ensure 100% stronger negotiation for your financial rights.',
   'hero.cta.primary': 'Book Your Free Consultation',
   'hero.cta.secondary': 'Get a Free Revenue Analysis',
 
@@ -208,7 +208,7 @@ const en = {
   'footer.tagline': 'Elite B2B healthcare consulting firm specializing in revenue maximization, claim leak audits, and operational policy design.',
   'footer.quickLinks': 'Quick Links',
   'footer.contactInfo': 'Contact Info',
-  'footer.location': 'Tripoli, Libya',
+  'footer.location': 'Al Jarraba St - Tripoli - Libya + Ard Al Rahba - Benghazi - Libya',
   'footer.copyright': 'Al Ihsan. All rights reserved.',
   'footer.credits': 'Healthcare Consulting with Disciplined Operating Standards'
 };

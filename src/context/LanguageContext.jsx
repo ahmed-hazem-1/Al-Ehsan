@@ -123,7 +123,9 @@ export function LanguageProvider({ children }) {
   };
 
   const t = (key) => {
-    return translations[lang]?.[key] || translations['ar']?.[key] || key;
+    if (translations[lang] && translations[lang][key] !== undefined) return translations[lang][key];
+    if (translations['ar'] && translations['ar'][key] !== undefined) return translations['ar'][key];
+    return key;
   };
 
   const isRtl = lang === 'ar' || lang === 'ly' || lang === 'sa' || lang === 'eg';

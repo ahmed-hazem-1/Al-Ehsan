@@ -80,12 +80,14 @@ export default function Footer() {
             <ul className="footer__contact-list">
               <li>
                 <Phone size={16} className="footer__contact-icon" />
-                <span className="footer__contact-text" dir="ltr">0910202873 / +218 91 1234567</span>
+                <span className="footer__contact-text" dir="auto">٠٩١٠٢٠٢٨٧٣</span>
               </li>
-              <li>
-                <MapPin size={16} className="footer__contact-icon" />
-                <span className="footer__contact-text">{t('footer.location')}</span>
-              </li>
+              {t('footer.location').split('+').map((loc, index) => (
+                <li key={index}>
+                  <MapPin size={16} className="footer__contact-icon" />
+                  <span className="footer__contact-text">{loc.trim()}</span>
+                </li>
+              ))}
             </ul>
           </div>
 

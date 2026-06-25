@@ -65,22 +65,26 @@ export default function Hero({ heroRef, animate }) {
           
           <h1 className="hero__title fade-up" style={{ transitionDelay: '100ms' }}>
             <span className="hero__title-static">{t('hero.static1')}</span>
-            <span className="hero__title-rotator">
-              <span 
-                className="hero__title-words-container"
-                style={{ 
-                  transform: `translateY(-${translationPercentage}%)`,
-                  transition: transitionEnabled ? 'transform 650ms cubic-bezier(0.76, 0, 0.24, 1)' : 'none'
-                }}
-              >
-                {displayWords.map((word, i) => (
-                  <span key={i} className="hero__title-word">
-                    {word}
-                  </span>
-                ))}
+            {words[0] !== '' && (
+              <span className="hero__title-rotator">
+                <span 
+                  className="hero__title-words-container"
+                  style={{ 
+                    transform: `translateY(-${translationPercentage}%)`,
+                    transition: transitionEnabled ? 'transform 650ms cubic-bezier(0.76, 0, 0.24, 1)' : 'none'
+                  }}
+                >
+                  {displayWords.map((word, i) => (
+                    <span key={i} className="hero__title-word">
+                      {word}
+                    </span>
+                  ))}
+                </span>
               </span>
-            </span>
-            <span className="hero__title-static">{t('hero.static2')}</span>
+            )}
+            {t('hero.static2') !== '' && (
+              <span className="hero__title-static">{t('hero.static2')}</span>
+            )}
           </h1>
           
           <p className="hero__subtitle fade-up" style={{ transitionDelay: '200ms' }}>
