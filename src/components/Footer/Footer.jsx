@@ -80,7 +80,7 @@ export default function Footer() {
             <ul className="footer__contact-list">
               <li>
                 <Phone size={16} className="footer__contact-icon" />
-                <span className="footer__contact-text" dir="auto">٠٩١٠٢٠٢٨٧٣</span>
+                <span className="footer__contact-text" dir="auto">00218910202873</span>
               </li>
               {t('footer.location').split('+').map((loc, index) => (
                 <li key={index}>
